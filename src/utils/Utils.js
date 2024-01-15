@@ -16,7 +16,7 @@ if (isCryptoAvailable) { // web
  * @param bytes {Uint8Array}
  * @return  {Promise<ArrayBuffer>}
  */
-function sha256(bytes: Uint8Array): Promise<ArrayBuffer> {
+function sha256(bytes) {
   return isCryptoAvailable
     ? crypto.subtle.digest('SHA-256', bytes)
     : globalThis.crypto.subtle.digest({ name: 'SHA-256' }, bytes)
