@@ -16,7 +16,7 @@ export interface WalletData {
 }
 export interface TransferBodyParams {
     queryId?: number;
-    tokenAmount: BN;
+    jettonAmount: BN;
     toAddress: Address;
     responseAddress: Address;
     forwardAmount: BN;
